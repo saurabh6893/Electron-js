@@ -1,0 +1,16 @@
+{
+  "name": "img-optimizer",
+  "version": "1.0.0",
+  "description": "this will be an app to shirnk and optimze images",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec electron ."
+  },
+  "author": "Saurabh-Kedar",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^16.0.4",
+    "nodemon": "^2.0.15"
+  }
+}

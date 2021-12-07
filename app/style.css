@@ -1,0 +1,14 @@
+body {
+  background: teal;
+  border-radius: 25px;
+}
+
+p {
+  font-size: 35px;
+  transition: all 2s ease;
+}
+
+p:hover {
+  text-align: center;
+  font-weight: bold;
+}
