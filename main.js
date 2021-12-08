@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require("electron");
+const { app, BrowserWindow, Menu, globalShortcut } = require("electron");
 
 //declaring the environment
 process.env.NODE_ENV = "development";
@@ -28,6 +28,11 @@ app.on("ready", () => {
 
   Menu.setApplicationMenu(mainMenu);
 
+  globalShortcut.register("Ctrl+R", () => mainWindow.reload());
+  globalShortcut.register("Ctrl+W", () => app.quit());
+  globalShortcut.register(!isMac ? "Ctrl+Alt+i" : "Command+Alt+I", () =>
+    mainWindow.toggleDevTools()
+  );
   mainWindow.on("ready", () => (mainWindow = null));
 });
 //status////status////status////status////status////status////status////status////status////status////status////status//
